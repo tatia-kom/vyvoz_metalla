@@ -1,0 +1,96 @@
+@import "../base/var";
+
+#agreement-modal {
+  background: rgba(228, 228, 229, 0.75);
+
+  .modal-dialog {
+    width: 930px;
+    max-width: 930px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    opacity: 0;
+    pointer-events: all;
+
+    @media (max-width: $sm) {
+      width: 95%;
+    }
+
+    .buy_form_wrap {
+      background-color: #fff;
+      -webkit-box-shadow: 0px 0px 55px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 0px 55px 0px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      position: relative;
+      padding: 40px 10px 10px 10px;
+
+      @media (max-width: $xs) {
+        padding-top: 30px;
+      }
+    }
+
+    .closee {
+      font-size: 25px;
+      position: absolute;
+      right: 12px;
+      top: -3px;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      cursor: pointer;
+      display: block;
+    }
+  }
+
+  &.in {
+    .modal-dialog {
+      opacity: 1;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .for-scroll {
+    height: 500px;
+    padding: 0 25px 25px;
+    overflow: auto;
+
+    @media (max-width: $xs) {
+      padding: 0 15px;
+    }
+
+    h6 {
+      text-align: center;
+      font-weight: 700;
+      font-family: $m;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-size: 26px;
+
+      @media (max-width: $xs) {
+        font-size: 18px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+#agreement-modal .for-scroll::-webkit-scrollbar {
+  background: #fff;
+  width: 8px;
+}
+
+#agreement-modal .for-scroll::-webkit-scrollbar-thumb {
+  background: $orange;
+  border-radius: 4px;
+  cursor: pointer;
+}

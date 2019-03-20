@@ -1,5 +1,9 @@
 $(document).ready(function(){
-   
+
+    $('.open_agreement_modal').click(function (e) {
+        e.preventDefault();
+        $('#agreement-modal').modal('show');
+    });
 
     $('.phone').inputmask({
         "mask": "+7 (999) 999-99-99"
