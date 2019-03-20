@@ -1,0 +1,53 @@
+@import "../base/var";
+
+.advantages {
+  margin: 45px 0;
+
+  @media (max-width: $xs) {
+    margin: 20px 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 31%;
+    display: flex;
+    margin: 15px 0;
+
+    @media (max-width: $sm) {
+      width: 48%;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    margin-left: 15px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: $b;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 16px;
+
+    @media (max-width: $xs) {
+      font-size: 14px;
+    }
+  }
+}

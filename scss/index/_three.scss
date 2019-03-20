@@ -1,0 +1,76 @@
+@import "../base/var";
+
+.three {
+  background: $footer-bg;
+  padding: 40px 0;
+  margin: 70px 0;
+
+  @media (max-width: $md) {
+    padding: 30px 0;
+  }
+
+  @media (max-width: $sm) {
+    padding: 20px 0;
+  }
+
+  @media (max-width: $xs) {
+    padding: 15px 0;
+    margin: 15px 0;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $xs) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    width: 30%;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $md) {
+      width: 32%;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+      margin: 15px 0;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+
+    @media (max-width: $md) {
+      width: 50px;
+    }
+
+    @media (max-width: $sm) {
+      width: 30px;
+    }
+
+    @media (max-width: $xs) {
+      width: 60px;
+    }
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 35px;
+
+    @media (max-width: $md) {
+      font-size: 14px;
+      margin-left: 15px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 12px;
+    }
+  }
+}

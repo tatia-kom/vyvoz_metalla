@@ -1,0 +1,143 @@
+@import "../base/var";
+
+.footer {
+  background: $footer-bg;
+  margin: -50px 0 0;
+  z-index: 0;
+  padding: 113px 0 0;
+
+  @media (max-width: $xs) {
+    padding-top: 75px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $xs) {
+      display: block;
+    }
+  }
+
+  &__left {
+
+  }
+
+  &__address {
+    margin: 0;
+
+    @media (max-width: $sm) {
+      font-size: 12px;
+      padding-left: 50px;
+    }
+  }
+
+  &__credits {
+    background: none;
+    padding: 0;
+
+    @media (max-width: $sm) {
+      display: block;
+    }
+  }
+
+  &__email {
+    @media (max-width: $sm) {
+      margin-left: 0;
+    }
+  }
+
+  &__right {
+    @media (max-width: $xs) {
+      margin-top: 30px;
+    }
+  }
+
+  &__menu-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: $b;
+    text-transform: uppercase;
+  }
+
+  &__social {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, $yellow 0%, $orange 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 16px;
+    }
+  }
+
+  &__menu {
+    margin: 15px 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $xs) {
+      display: block;
+    }
+  }
+
+  &__item {
+    margin-left: 50px;
+
+    @media (max-width: $sm) {
+      margin-left: 15px;
+    }
+
+    @media (max-width: $xs) {
+      margin-left: 0;
+      margin-top: 15px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+      margin-top: 0;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $black;
+    display: block;
+
+    &_grey {
+      color: $grey-text;
+    }
+
+    &_small {
+      font-size: 10px;
+    }
+
+    &_margin {
+      margin: 0 10px;
+    }
+  }
+
+
+
+  &__under {
+    background: $white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    @media (max-width: $xs) {
+      margin-top: 30px;
+    }
+  }
+}

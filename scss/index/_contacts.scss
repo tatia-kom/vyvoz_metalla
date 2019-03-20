@@ -1,0 +1,267 @@
+@import "../base/var";
+
+.contacts {
+  margin: 0 auto;
+  width: 1290px;
+  max-width: 100%;
+  box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.1);
+  background: $white;
+  display: flex;
+  z-index: 1;
+
+  @media (max-width: 1350px) {
+    margin: 0 30px;
+    max-width: calc(100% - 60px);
+  }
+
+  @media (max-width: $sm) {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  @media (max-width: $xs) {
+    margin: 0 15px;
+    max-width: calc(100% - 30px);
+  }
+
+  &__map {
+    width: 55%;
+    flex-shrink: 0;
+
+    @media (max-width: $md) {
+      width: 45%;
+    }
+
+    @media (max-width: $sm) {
+      width: 100%;
+      height: 500px;
+    }
+
+    @media (max-width: $xs) {
+      height: 300px;
+    }
+  }
+
+  &__content {
+    padding: 25px 0 30px;
+    flex-grow: 1;
+    background: $white;
+  }
+
+  &__title {
+    font-weight: $b;
+    font-size: 24px;
+    color: $black;
+    margin: 0 28px 25px;
+
+    @media (max-width: $xs) {
+      margin: 0 15px 20px;
+    }
+  }
+
+  &__address {
+    font-size: 14px;
+    font-weight: $r;
+    min-height: 36px;
+    margin: 0 28px;
+    position: relative;
+    padding: 8px 0 0 60px;
+
+    @media (max-width: $xs) {
+      margin: 0 15px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: $white;
+      box-shadow: 0px 25px 35px rgba(0, 0, 0, 0.1), inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+      width: 36px;
+      height: 36px;
+      display: block;
+      border-radius: 50%;
+      left: 0;
+      top: calc(50% - 18px);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: url('/img/address.svg');
+      background-size: contain;
+      width: 14px;
+      height: 18px;
+      display: block;
+      left: 11px;
+      top: calc(50% - 9px);
+    }
+  }
+
+  &__credits {
+    display: flex;
+    background: $footer-bg;
+    margin-top: 15px;
+    padding: 16px 28px;
+    width: 100%;
+
+    @media (max-width: $xs) {
+      display: block;
+
+      padding: 10px 15px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: $black;
+    font-size: 14px;
+    font-weight: $m;
+    padding-left: 46px;
+    padding-top: 7px;
+    display: block;
+    min-height: 30px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: $white;
+      box-shadow: 0px 25px 35px rgba(0, 0, 0, 0.1), inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+      width: 30px;
+      height: 30px;
+      display: block;
+      border-radius: 50%;
+      left: 0;
+      top: 0;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background-size: contain;
+      display: block;
+      width: 12px;
+      height: 12px;
+      top: 9px;
+      left: 9px;
+    }
+
+    &_phone {
+      &:after {
+        background-image: url('/img/contacts_phone.svg');
+      }
+    }
+
+    &_email {
+      margin-left: 32px;
+
+      &:after {
+        background-image: url('/img/email.svg');
+      }
+
+      @media (max-width: $xs) {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: $b;
+    font-size: 14px;
+    text-align: center;
+    margin: 25px 85px 0 28px;
+
+    @media (max-width: $xs) {
+      margin: 15px 15px;
+    }
+  }
+
+  &__form {
+    margin: 10px 47px 0 28px;
+
+    @media (max-width: $xs) {
+      margin: 10px 15px 0;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    @media (max-width: $xs) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__input-wrap {
+    border-bottom: 1px solid #AAA5A5;
+    padding: 10px 0 10px 32px;
+    position: relative;
+    width: 45%;
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+
+    &:before {
+      display: block;
+      width: 18px;
+      height: 18px;
+      content: '';
+      top: 10px;
+      left: 0;
+      position: absolute;
+    }
+
+    &_phone {
+      &:before {
+        background: url('/img/contacts_input_phone.svg');
+      }
+    }
+
+    &_email {
+      &:before {
+        background: url('/img/contacts_input_email.svg');
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 14px;
+    color: $black;
+    border: 0;
+  }
+
+  &__checkbox-text {
+    font-size: 10px;
+    color: $grey-text;
+    padding-left: 18px;
+
+    &:before {
+      top: 2px;
+      width: 9px;
+      height: 9px;
+      border-width: 2px;
+    }
+  }
+
+  &__button {
+    margin: 20px auto 0;
+    display: block;
+    width: 316px;
+    max-width: 100%;
+    height: 45px;
+    color: $white;
+    border: 0;
+    border-radius: $radius;
+    font-size: 18px;
+    font-weight: $r;
+    background: linear-gradient(305.23deg, $red -2.13%, $yellow 120.44%);
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+  }
+}

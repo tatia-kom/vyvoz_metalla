@@ -1,0 +1,151 @@
+@import "../base/var";
+
+.price {
+  margin-top: 50px;
+
+  @media (max-width: $xs) {
+    margin-top: 30px;
+  }
+
+  &__main-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: $b;
+
+    @media (max-width: $xs) {
+      margin-top: 0;
+    }
+  }
+
+  &__wrap {
+    max-width: 900px;
+    margin: 0 auto;
+
+    &_flex {
+      display: flex;
+    }
+
+    @media (max-width: $sm) {
+      max-width: 100%;
+      padding: 0 30px;
+    }
+
+    @media (max-width: $xs) {
+      padding: 0 15px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: $m;
+    text-align: justify;
+    margin-top: 20px;
+
+    @media (max-width: $xs) {
+      font-size: 14px;
+    }
+
+    &_small {
+      font-size: 16px;
+      font-weight: $r;
+      margin-top: 25px;
+
+      @media (max-width: $xs) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+    margin-top: 25px;
+    margin-bottom: 35px;
+
+    @media (max-width: $xs) {
+      flex-wrap: wrap;
+      margin: 10px 0 30px;
+    }
+  }
+
+  &__tab {
+    flex-grow: 1;
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+
+    &.active {
+      background: linear-gradient(108.15deg, $yellow 7.65%, $orange 126.54%);
+      border: 0;
+      border-radius: $radius;
+
+      .price__link {
+        font-size: 18px;
+        font-weight: $b;
+        color: $white!important;
+
+        @media (max-width: $sm) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: transparent!important;
+    border: 0!important;
+    font-weight: normal;
+    font-size: 16px;
+    color: $black!important;
+
+    &:hover {
+      color: $orange!important;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__blocks {
+
+  }
+
+  &__table {
+    font-size: 16px;
+    font-weight: normal;
+
+    @media (max-width: $sm) {
+      font-size: 14px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 10px;
+    }
+  }
+
+  &__row {
+
+    &_head {
+      background: $table-head!important;
+    }
+
+    &:nth-child(odd) {
+      background: $table-stroke;
+    }
+  }
+
+  &__cell {
+    width: 25%;
+    padding: 10px 0;
+
+    @media (max-width: $xs) {
+      text-align: center;
+    }
+  }
+}
