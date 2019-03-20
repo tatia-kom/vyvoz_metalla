@@ -87,7 +87,7 @@
     &:after {
       content: '';
       position: absolute;
-      background: url('/img/address.svg');
+      background: url('../img/address.svg');
       background-size: contain;
       width: 14px;
       height: 18px;
@@ -147,7 +147,7 @@
 
     &_phone {
       &:after {
-        background-image: url('/img/contacts_phone.svg');
+        background-image: url('../img/contacts_phone.svg');
       }
     }
 
@@ -155,7 +155,7 @@
       margin-left: 32px;
 
       &:after {
-        background-image: url('/img/email.svg');
+        background-image: url('../img/email.svg');
       }
 
       @media (max-width: $xs) {
@@ -216,13 +216,13 @@
 
     &_phone {
       &:before {
-        background: url('/img/contacts_input_phone.svg');
+        background: url('../img/contacts_input_phone.svg');
       }
     }
 
     &_email {
       &:before {
-        background: url('/img/contacts_input_email.svg');
+        background: url('../img/contacts_input_email.svg');
       }
     }
   }

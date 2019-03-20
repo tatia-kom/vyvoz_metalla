@@ -72,7 +72,7 @@ function init() {
             clusterCaption: 'Заголовок'
         }, {
             iconLayout: 'default#image'
-            , iconImageHref: '/img/map_marker.png'
+            , iconImageHref: 'img/map_marker.png'
             , iconImageSize: [61, 61]
             , iconImageOffset: [-30.5, -30.5]
         });
