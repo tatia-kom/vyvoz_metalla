@@ -23,6 +23,7 @@
 
     &_flex {
       display: flex;
+      justify-content: space-between;
     }
 
     @media (max-width: $sm) {
@@ -113,7 +114,13 @@
   }
 
   &__blocks {
+    .tab-pane {
+      min-height: 400px;
 
+      @media (max-width: $xs) {
+        min-height: 0;
+      }
+    }
   }
 
   &__table {
