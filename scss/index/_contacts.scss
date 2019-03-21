@@ -259,6 +259,11 @@
     font-size: 18px;
     font-weight: $r;
     background: linear-gradient(305.23deg, $red -2.13%, $yellow 120.44%);
+    transition: 0.3s;
+
+    &:hover {
+      background: linear-gradient(305.23deg, $yellow -2.13%, $red 120.44%);
+    }
 
     @media (max-width: $xs) {
       width: 100%;

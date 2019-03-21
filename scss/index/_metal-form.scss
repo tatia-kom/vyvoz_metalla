@@ -116,6 +116,12 @@
     color: $black;
     border: 0;
     margin: 30px 0 0;
+    transition: 0.3s;
+
+    &:hover {
+      background: linear-gradient(296.18deg, $red -2.13%, $yellow 120.44%);
+      color: $white;
+    }
   }
 }
 

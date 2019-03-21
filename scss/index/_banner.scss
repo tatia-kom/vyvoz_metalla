@@ -131,6 +131,11 @@
     font-size: 18px;
     padding: 11px 35px;
     border: 0;
+    transition: 0.3s;
+
+    &:hover {
+      background: linear-gradient(296.18deg, $yellow -2.13%, $red 120.44%);
+    }
 
     @media (max-width: $xs) {
       font-size: 14px;
